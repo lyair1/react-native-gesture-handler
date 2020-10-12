@@ -487,14 +487,15 @@ declare module 'react-native-gesture-handler/Swipeable' {
     overshootLeft?: boolean;
     overshootRight?: boolean;
     overshootFriction?: number,
-    onSwipeableLeftOpen?: () => void;
-    onSwipeableRightOpen?: () => void;
-    onSwipeableOpen?: () => void;
-    onSwipeableClose?: () => void;
-    onSwipeableLeftWillOpen?: () => void;
-    onSwipeableRightWillOpen?: () => void;
-    onSwipeableWillOpen?: () => void;
-    onSwipeableWillClose?: () => void;
+    onSwipeableLeftOpen?: ({fromValue: string, velocityX: string}) => void;
+    onSwipeableRightOpen?: ({fromValue: string, velocityX: string}) => void;
+    onSwipeableOpen?: ({fromValue: string, velocityX: string}) => void;
+    onSwipeableClose?: ({fromValue: string, velocityX: string}) => void;
+    onSwipeableLeftWillOpen?: ({fromValue: string, velocityX: string}) => void;
+    onSwipeableRightWillOpen?: ({fromValue: string, velocityX: string}) => void;
+    onSwipeableWillOpen?: ({fromValue: string, velocityX: string}) => void;
+    onSwipeableWillClose?: ({fromValue: string, velocityX: string}) => void;
+    onStartDrag?: () => void
     /**
      *
      * This map describes the values to use as inputRange for extra interpolation:
